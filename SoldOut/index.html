@@ -5,12 +5,29 @@
     <meta charset="utf-8" />
     <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
 
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css">
+
+
+    
+    
     <script src="cordova.js"></script>
     <script src="kendo/js/jquery.min.js"></script>
     <script src="kendo/js/kendo.mobile.min.js"></script>
+    <script src="script/app.js"></script>
+    
+    <script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
     
 </head>
 <body>
+    hghjgjh
+    <div data-role="view" id="home">
+        <div data-role="button" href="view/HtmlPage.html#child">Home</div>
+      <a href="aa" data-transition="slide">Slide to Page Two</a>
+    </div>
+    
+    <div data-role="view" id="aa">
+        <a href="#home">Go to Page One</a>
+    </div>
     
 </body>
 </html>
