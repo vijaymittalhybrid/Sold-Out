@@ -1,0 +1,52 @@
+body {
+}
+
+/*dashbord*/
+.hedr{ border-bottom:2px solid #3ADF00;}
+.nvbar{ height:45px;background-color:#FFFFFF !important}
+.nvbar span{ font-size:20px;font-weight:bold;color:#147E46}
+.nvbar .setting{ background-color:white !important;border:0px;margin-left:-13px;margin-top:5px !important;}
+.nvbar .search{ background-color:white !important;border:0px;margin-right:-13px;margin-top:2px !important;}
+.nvbar .img{ width:23px;height:23px;}
+.nvbar .imgS{ width:29px;height:29px;}
+
+.drawerDiv{ width:235px;}
+.drawerDiv ul{padding:0px 0px 0px 0px}
+.km-group-title{ padding:22px 0px;}
+.km-flat .km-group-title {background:#E2E2E2;border-color: rgba(0,0,0,0.1);}
+#list{border:1px solid #cccccc}
+#list li ul li{color:#0091DC;font-size:16px;text-align:justify;height:50px;}
+.lispan{margin-left:28px;}
+.km-list .km-icon{margin-left:5px;width:35px;font-size:16px;}
+
+#dashbord .contDv{ width:90%;height:auto;margin:0px auto;margin-top:70px;}
+#dashbord .contDv .sellDv{ width:100%;height:50px;border:1px solid red;background-color:blue}
+
+/*Data-icon*/
+.km-account:after,.km-account:before{content:'\e219'}
+.km-arrow-e:after,.km-arrow-e:before{content: "\e214"}
+.km-shortlist:after,.km-shortlist:before{content: "\e20c";}
+.km-feedback:after,.km-feedback:before{content: "\e099";}
+.km-about:after,.km-about:before{content: "\e213";}
+.km-setting:after,.km-setting:before{content: "\e20f";}
+.km-ad:after,.km-ad:before{content: "\e0bd";}
+.km-msp:after,.km-msp:before{content: "\e0ab";}
+.km-rateus:after,.km-rateus:before{content: "\e046";}
+.km-alert:after,.km-alert:before{content: "\e207";}
+.km-exit:after,.km-exit:before{content: "\e0b9";}
+
+/*home*/
+#home .logoDv,#dashbord .logoDv{ width:85%;height:auto;margin:0px auto;margin-top:25px;}
+#home .logoimg ,#dashbord .logoimg{ width: 115px;height: 100px;margin: -25px 0px 0px 96px;}
+.logoDv .p2{ margin:-12px 0px 4px 95px;color:#00A5EC}
+.logoDv .p1{ margin:-3px 0px 7px 13px;color:#00A5EC}
+.logoDv .p3{ margin:-12px 0px 4px 95px;color:#00A5EC}
+.logoDv .p4{ margin:-3px 0px 7px 13px;color:#00A5EC}
+.logoDv p{ font-size:16px;}
+#home .giftDv{ width:80%;height:auto;margin:0px auto;margin-top: 15px;margin-left: 45px;}
+#home .giftimg{width: 254px;height: 210px;/*margin: -83px 0px 0px -25px;*/}
+#home .km-content,#dashbord .km-content{background-color:white;}
+#home .btnDv{width:90%;height:120px;margin:0px auto;margin-top:30px;margin-left: 40px}
+/*.btnDv .btn{width:100%;height:100%;background-color:#14B670; font-size: 19px;text-align: center;line-height: 26px;color: white;font-weight: 700;letter-spacing: 2px;border-radius:80px;}*/
+.btnDv .btn{display: block;width: 100px;height: 100px;line-height: 50px;border: 2px solid #f5f5f5;border-radius: 50%;color: #f5f5f5;text-align: center;text-decoration: none;background-color:#14B670;box-shadow: 0 0 3px gray;font-size: 20px;font-weight: bold;}
+.btnDv .btn p{line-height:52px;}

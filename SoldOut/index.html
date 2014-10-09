@@ -4,30 +4,80 @@
     <title></title>
     <meta charset="utf-8" />
     <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
-
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css">
-
-
-    
-    
+    <link href="styles/main.css" rel="stylesheet"/>
     <script src="cordova.js"></script>
     <script src="kendo/js/jquery.min.js"></script>
-    <script src="kendo/js/kendo.mobile.min.js"></script>
+    <script src="kendo/js/kendo.all.min.js"></script>
     <script src="script/app.js"></script>
-    
-    <script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
-    
+    <script src="script/dashbord.js"></script>
 </head>
 <body>
-    hghjgjh
-    <div data-role="view" id="home">
-        <div data-role="button" href="view/HtmlPage.html#child">Home</div>
-      <a href="aa" data-transition="slide">Slide to Page Two</a>
-    </div>
     
-    <div data-role="view" id="aa">
-        <a href="#home">Go to Page One</a>
+    <!--Drawer-->
+    <div data-role="drawer" id="my-drawer" class="drawerDiv" style="background-color:red" data-model="app.dashbordService.viewModel" data-views="['home','dashbord']">
+        <ul data-role="listview" data-type="group" id="list" >
+            <li >
+                <ul >
+                    <li data-bind="click:home" data-icon="home"><span>Home</span></li>
+                    <li data-icon="msp"><span>Check Product MSP</span></li>
+                </ul>
+            </li>
+            <li>
+                <ul >
+                    <li data-icon="alert">Alert & Recommended</li>
+                    <li data-icon="ad">My Ads</li>
+                    <li data-icon="shortlist">My Shortlist</li>
+                    <li data-icon="setting">My Account</li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li data-icon="rateus">Rate Us</li>
+                    <li data-icon="arrow-e">Share App</li>
+                    <li data-icon="feedback">Feedback</li>
+                    <li data-icon="about">About Sold Out</li>
+                    <li data-icon="account">Sign In</li>
+                    <li data-bind="click:exit" data-icon="exit">Exit</li>
+                </ul>
+            </li>
+        </ul>
     </div>
+    <!--Drawer-->
     
+    <!--HOME-->
+    <div data-role="view" id="home" >
+        <div class="logoDv">
+            <p class="p1">Welcome to</p>
+            <img src="styles/images/sold.jpg" class="logoimg"/>
+            <p class="p2">
+                Our friendly marketplace
+            </p>
+        </div>
+        <div class="giftDv">
+             <img src="styles/images/giftpack.png" class="giftimg"/>
+        </div>
+        <div class="btnDv">
+           <div style="width:50%;height:120px;float:left;">
+               <a  href="#dashbord" class="btn"><p>Sell</p></a>
+           </div>
+            <div style="width:50%;height:120px;float:right;">
+                 <a  href="#dashbord" class="btn"><p>Buy</p></a>
+            </div>
+        </div>
+    </div>
+    <!--HOME-->
+   
+    <!--Dashboard Design for Sold out-->
+    <div data-role="view" id="dashbord" data-title="Sold Out" data-model="app.dashbordService.viewModel" data-show="app.dashbordService.viewModel.show">
+        
+        <div data-role="header" class="hedr">
+            <div data-role="navbar" class="nvbar">
+                <a data-align="left" data-rel="drawer" href="#my-drawer" data-role="button"  class="setting"><img src="styles/images/set.png " class="img"></a>
+                <span data-role="view-title">dsd</span>
+                <a data-align="right" data-click="msg" data-role="button" class="search"><img src="styles/images/search.png" class="imgS"></a>
+            </div>
+        </div>
+    </div>
+    <!--Dashboard Design for Sold out--> 
 </body>
 </html>

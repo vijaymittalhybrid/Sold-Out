@@ -3,8 +3,10 @@
     
     apps = new kendo.mobile.Application(document.body,
                                         {
-                                           layout:'my-layout',
-                                            skin:'flat'
+                                           layout:'sold_out_layout',
+                                            skin:'flat',
+                                            initial:'home',
+                                            transition:''
                                         }
     );
 })(window);
