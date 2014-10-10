@@ -14,7 +14,7 @@
 <body>
     
     <!--Drawer-->
-    <div data-role="drawer" id="my-drawer" class="drawerDiv" style="background-color:red" data-model="app.dashbordService.viewModel" data-views="['home','dashbord']">
+    <div data-role="drawer" id="my-drawer" class="drawerDiv" style="background-color:red" data-model="app.dashbordService.viewModel" data-views="['sell','dashbord']">
         <ul data-role="listview" data-type="group" id="list" >
             <li >
                 <ul >
@@ -45,7 +45,7 @@
     <!--Drawer-->
     
     <!--HOME-->
-    <div data-role="view" id="home" >
+    <div data-role="view" id="home">
         <div class="logoDv">
             <p class="p1">Welcome to</p>
             <img src="styles/images/sold.jpg" class="logoimg"/>
@@ -58,7 +58,7 @@
         </div>
         <div class="btnDv">
            <div style="width:50%;height:120px;float:left;">
-               <a  href="#dashbord" class="btn"><p>Sell</p></a>
+               <a  href="#sell" class="btn"><p>Sell</p></a>
            </div>
             <div style="width:50%;height:120px;float:right;">
                  <a  href="#dashbord" class="btn"><p>Buy</p></a>
@@ -68,8 +68,18 @@
     <!--HOME-->
    
     <!--Dashboard Design for Sold out-->
-    <div data-role="view" id="dashbord" data-title="Sold Out" data-model="app.dashbordService.viewModel" data-show="app.dashbordService.viewModel.show">
+    <div data-role="view" id="dashbord" data-layout="my-layout" data-title="Sold Out" data-model="app.dashbordService.viewModel" data-show="app.dashbordService.viewModel.show">
         
+    </div>
+   
+    
+    <!--Sell Product-->
+    <div data-role="view" id="sell" data-layout="sell-layout" data-title="1/2">
+        
+    </div>
+    
+    <!--Layout Design buy-->
+    <div data-role="layout" data-id="my-layout">
         <div data-role="header" class="hedr">
             <div data-role="navbar" class="nvbar">
                 <a data-align="left" data-rel="drawer" href="#my-drawer" data-role="button"  class="setting"><img src="styles/images/set.png " class="img"></a>
@@ -78,6 +88,17 @@
             </div>
         </div>
     </div>
-    <!--Dashboard Design for Sold out--> 
+    
+    <!--Layout Design sell-->
+    <div data-role="layout" data-id="sell-layout">
+        <div data-role="header" class="hedr">
+            <div data-role="navbar" class="nvbar">
+                <a data-align="left" data-rel="drawer" href="#my-drawer" data-role="button"  class="setting"><img src="styles/images/set.png " class="img"></a>
+                <span>Sell</span>
+                <span data-role="view-title" class="title" data-align="right"></span>
+                
+            </div>
+        </div>
+    </div>
 </body>
 </html>

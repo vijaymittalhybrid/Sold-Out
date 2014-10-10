@@ -2,13 +2,7 @@ body {
 }
 
 /*dashbord*/
-.hedr{ border-bottom:2px solid #3ADF00;}
-.nvbar{ height:45px;background-color:#FFFFFF !important}
-.nvbar span{ font-size:20px;font-weight:bold;color:#147E46}
-.nvbar .setting{ background-color:white !important;border:0px;margin-left:-13px;margin-top:5px !important;}
-.nvbar .search{ background-color:white !important;border:0px;margin-right:-13px;margin-top:2px !important;}
-.nvbar .img{ width:23px;height:23px;}
-.nvbar .imgS{ width:29px;height:29px;}
+
 
 .drawerDiv{ width:235px;}
 .drawerDiv ul{padding:0px 0px 0px 0px}
@@ -34,6 +28,17 @@ body {
 .km-rateus:after,.km-rateus:before{content: "\e046";}
 .km-alert:after,.km-alert:before{content: "\e207";}
 .km-exit:after,.km-exit:before{content: "\e0b9";}
+
+/*layout*/
+
+.hedr{ border-bottom:2px solid #3ADF00;}
+.nvbar{ height:45px;background-color:#FFFFFF !important}
+.nvbar span{ font-size:20px;font-weight:bold;color:#147E46}
+.nvbar .setting{ background-color:white !important;border:0px;margin-left:-13px;margin-top:5px !important;}
+.nvbar .search{ background-color:white !important;border:0px;margin-right:-13px;margin-top:2px !important;}
+.nvbar .img{ width:23px;height:23px;}
+.nvbar .imgS{ width:29px;height:29px;}
+.title{ color:#00A5EC !important;font-size:16px !important}
 
 /*home*/
 #home .logoDv,#dashbord .logoDv{ width:85%;height:auto;margin:0px auto;margin-top:25px;}
