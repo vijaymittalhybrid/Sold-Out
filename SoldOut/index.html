@@ -8,8 +8,10 @@
     <script src="cordova.js"></script>
     <script src="kendo/js/jquery.min.js"></script>
     <script src="kendo/js/kendo.all.min.js"></script>
+    <script src="script/jquery.validate.js"></script>
     <script src="script/app.js"></script>
     <script src="script/dashbord.js"></script>
+    <script src="script/sell.js"></script>
 </head>
 <body>
     
@@ -44,6 +46,29 @@
     </div>
     <!--Drawer-->
     
+    <!--camera POP OVER-->
+    <div data-role="modalview" id="cameraPopOver" style="width:70%;height:115px;border-radius:10px;" data-modal="false">
+        <div style="width:100%;">
+            <p>
+                <a data-role="button" id="capturePhotoButton" data-click="close" style="width:100%;">Capture Photo</a>
+            </p>
+            <p>
+                <a data-role="button" id="getPhotoFromAlbumButton" data-click="close" style="width:100%;">Choose from Album</a> 
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        function close(){
+         	$("#cameraPopOver").data("kendoMobileModalView").close();     
+        }
+    </script>
+    <!--camera POP OVER-->
+    
+    <!--*******************************************************************************************************************
+    **********************************************************************************************************************
+    **********************************************************************************************************************-->
+    
     <!--HOME-->
     <div data-role="view" id="home">
         <div class="logoDv">
@@ -58,25 +83,77 @@
         </div>
         <div class="btnDv">
            <div style="width:50%;height:120px;float:left;">
-               <a  href="#sell" class="btn"><p>Sell</p></a>
+               <a  href="#sell_F" class="btn"><p>Sell</p></a>
            </div>
             <div style="width:50%;height:120px;float:right;">
                  <a  href="#dashbord" class="btn"><p>Buy</p></a>
             </div>
         </div>
     </div>
-    <!--HOME-->
    
     <!--Dashboard Design for Sold out-->
     <div data-role="view" id="dashbord" data-layout="my-layout" data-title="Sold Out" data-model="app.dashbordService.viewModel" data-show="app.dashbordService.viewModel.show">
         
     </div>
    
+    <!--************************************************************************************************************-->
     
     <!--Sell Product-->
-    <div data-role="view" id="sell" data-layout="sell-layout" data-title="1/2">
-        
+    <div data-role="view" id="sell_F" data-layout="sell-layout" data-title="1/3" data-model="app.sellService.viewModel" data-show="app.sellService.viewModel.show">
+        <div data-role="content" id="sellContent_F">
+            <form id="sellform_F">
+                <div id="sell_stepF">
+            		<h3>Upload Image</h3>
+            		<div class="cameraDv">
+            		
+            			<!--Ad image 1-->
+            			<div id="picture1" class="postImage">
+            				<div class="imgDiv">
+            					<a data-bind="click:deleteImage"><img id="smallImage1" src="" /></a>
+            				</div> 
+            			</div>
+            			
+            			<!--Ad image 2-->
+            			<div id="picture2" class="postImage">
+            				<div class="imgDiv">
+            					<a data-bind="click:deleteImage"><img id="smallImage2" src="" /></a>
+            				</div> 
+            			</div>
+                        
+                        <!--Ad image 3-->
+            			<div id="picture3" class="postImage">
+            				<div class="imgDiv">
+            					<a data-bind="click:deleteImage"><img id="smallImage3" src="" /></a>
+            				</div> 
+            			</div>
+            		
+            			<!--Camera Link-->
+            			<div id="cameraBtn" class="cameraImg">
+            			    <a data-role="button" data-rel="modalview" href="#cameraPopOver" style="width:100%;height:90px;background-image:url('styles/images/camera.png');background-size:100% 100%;border: 0px solid #ccc;">
+            				</a>
+            			</div>
+            			 <input type="hidden" name="imageVal" id="imageVal" data-bind="value:hideVal" value=""/>
+            		</div>
+            		
+            		<div class="adDetail">
+            			<h3>Ad Title</h3>
+            			<p>
+            				<input type="text" name="adTitle" id="adTitle" class="textBox" data-bind="value:adTitle" placeholder="Please Enter Ad Title" required/>
+            			</p>
+            			<h3>Ad Description</h3>
+            			<p>
+                            <textarea name="adDescription" id="adDescription" placeholder="Please Enter Ad Description" data-bind="value:adDescription" class="textArea" required></textarea>
+            			</p>
+            			<p>
+            				<a data-role="button" class="btn" data-bind="click:sellFormFirst">Next</a>
+            			</p>
+            		</div>
+            	</div>
+            </form>
+        </div>
     </div>
+    
+     <!--************************************************************************************************************-->
     
     <!--Layout Design buy-->
     <div data-role="layout" data-id="my-layout">
