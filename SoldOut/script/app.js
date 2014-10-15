@@ -111,11 +111,16 @@
             if(index<3)
             {
                 ind = ++index;
+                console.log('index value '+ind);
                 var smallImage = document.getElementById('smallImage'+ind);
                 var picture = document.getElementById('picture'+ind);
                 smallImage.style.display = 'block';
                 picture.style.display = 'block';
                 smallImage.src = imageURI;
+                if(ind === 3)
+                {
+                    $('#cameraBtn').hide();
+                }
                 app.sellService.viewModel.setValue(ind);
             }
             else
@@ -134,12 +139,17 @@
             if(index<3)
             {
                 ind = ++index;
+                 console.log('index value '+ind);
                 var smallImage = document.getElementById('smallImage'+ind);
                 var picture = document.getElementById('picture'+ind);
                 smallImage.style.display = 'block';
                 picture.style.display = 'block';
                 // Show the captured photo.
                 smallImage.src = "data:image/jpeg;base64," + imageData;
+                if(ind === 3)
+                {
+                    $('#cameraBtn').hide();
+                }
                 app.sellService.viewModel.setValue(ind);
             }
             else
