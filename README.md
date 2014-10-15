@@ -1,4 +1,4 @@
-sold-out
+Sold-Out
 ========
 
-sold out
+Sold Out
