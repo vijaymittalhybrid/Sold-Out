@@ -38,7 +38,7 @@ body {
 .nvbar .search{ background-color:white !important;border:0px;margin-right:-13px;margin-top:2px !important;}
 .nvbar .img{ width:23px;height:23px;}
 .nvbar .imgS{ width:29px;height:29px;}
-.title{ color:#00A5EC !important;font-size:16px !important}
+.title{ color:#00A5EC !important;font-size:16px !important;line-height:1px;}
 
 /*view background color*/
 #sell_F .km-content{background-color:#FFFFFF}

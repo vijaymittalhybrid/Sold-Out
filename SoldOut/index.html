@@ -98,7 +98,7 @@
    
     <!--************************************************************************************************************-->
     
-    <!--Sell Product-->
+    <!--Sell Product First Form-->
     <div data-role="view" id="sell_F" data-layout="sell-layout" data-title="1/3" data-model="app.sellService.viewModel" data-show="app.sellService.viewModel.show">
         <div data-role="content" id="sellContent_F">
             <form id="sellform_F">
@@ -155,6 +155,13 @@
     
      <!--************************************************************************************************************-->
     
+    <!--Sell product second form-->
+    <div data-role="view" id="sell_S" data-layout="sell-layout" data-title="2/3" data-model="app.sellService.viewModel">
+        second form
+    </div>
+    
+    <!--************************************************************************************************************-->
+    
     <!--Layout Design buy-->
     <div data-role="layout" data-id="my-layout">
         <div data-role="header" class="hedr">
@@ -170,10 +177,9 @@
     <div data-role="layout" data-id="sell-layout">
         <div data-role="header" class="hedr">
             <div data-role="navbar" class="nvbar">
-                <a data-align="left" data-rel="drawer" href="#my-drawer" data-role="button"  class="setting"><img src="styles/images/set.png " class="img"></a>
-                <span>Sell</span>
+                <a data-align="left" data-role="backbutton"  class="setting">Back<!--<img src="styles/images/set.png " class="img">--></a>
+                <span>Sell Product</span>
                 <span data-role="view-title" class="title" data-align="right"></span>
-                
             </div>
         </div>
     </div>

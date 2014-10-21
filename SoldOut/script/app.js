@@ -4,8 +4,8 @@
     apps = new kendo.mobile.Application(document.body,
                                         {
                                             skin:'flat',
-                                            initial:'sell_F',
-                                            transition:''
+                                           // initial:'sell_F',
+                                            transition:'fade'
                                         }
     );
     

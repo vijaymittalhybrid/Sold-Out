@@ -4,7 +4,11 @@
     
     SellproductModel = kendo.data.ObservableObject.extend({
         
-        show:function(){
+        adTitle:'',
+        adDescription:'',
+        
+        show:function()
+        {
           
             /*Jquery validation method*/
             
@@ -54,8 +58,19 @@
                 }
             });
         },
+        firstFormDataSet:function()
+        {
+            productParam = {};
+            var that = this;
+            
+            productParam['h'] = that.get("adTitle");
+            productParam['y'] = that.get("adDescription");
+            console.log(productParam);
+            apps.navigate("#sell_S");
+        },
         
-        sellFormFirst:function(){
+        sellFormFirst:function()
+        {
             
             var statusF = $('#sellform_F').valid();
             
@@ -63,9 +78,14 @@
             {
                 return false;
             }
+            else
+            {
+                app.sellService.viewModel.firstFormDataSet();
+            }
         },
         
-        setValue:function(val){
+        setValue:function(val)
+        {
             this.set("hideVal",val);
         },
     });
